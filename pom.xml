@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>direct-common</artifactId>    
     <name>Direct Project common APIs</name>
-    <version>6.0.1</version>
+    <version>6.0.1.1</version>
     <description>Direct Project common APIs.  Includes instrumentation, auditing, and other utility APIs</description>
     <inceptionYear>2010</inceptionYear>
     <url>http://api.nhindirect.org/x/www/api.nhindirect.org/java/site/direct-common/${project.version}</url> 
@@ -28,7 +28,7 @@
    <parent>
 	   <groupId>org.springframework.boot</groupId>
 	   <artifactId>spring-boot-dependencies</artifactId>
-	   <version>2.1.6.RELEASE</version>
+	   <version>2.7.18</version>
    </parent>	   
 	<scm>
 		<url>scm:git:https://github.com/DirectProjectJavaRI/direct-common.git</url>
@@ -45,14 +45,14 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>2.1.6.RELEASE</version>
+				<version>2.7.18</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>			
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-parent</artifactId>
-				 <version>Greenwich.SR1</version>
+				 <version>Hoxton.SR12</version>
 				<type>pom</type>
 				<scope>import</scope>		
 			</dependency>											
@@ -255,33 +255,33 @@
          </execution>
        </executions>
      </plugin> 
-      <plugin>
-      	<groupId>org.apache.maven.plugins</groupId> 
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
-        <configuration>
-		    <additionalparam>-Xdoclint:none</additionalparam>
-			<charset>UTF-8</charset>
-			<docencoding>UTF-8</docencoding>
-			<docfilessubdirs>true</docfilessubdirs>
-			<detectJavaApiLink>true</detectJavaApiLink>
-			<detectLinks>true</detectLinks>
-			<source>1.8</source>
-			<show>public</show>
-            <excludePackageNames>
-               org.nhindirect.common.mail.dsn.impl:org.nhindirect.common.tx.impl:org.nhindirect.common.tx.provider:org.nhindirect.common.tx.module:org.nhindirect.common.tooling:org.nhindirect.common.crypto.tools
-            </excludePackageNames>   	                      	          
-        </configuration>	
-        <executions>
-            <execution>
-                <phase>package</phase>
-                <id>attach-javadocs</id>
-                <goals>
-                  <goal>jar</goal>
-                </goals>
-            </execution>
-        </executions>        	        
-      </plugin>      
+<!--      <plugin>-->
+<!--      	<groupId>org.apache.maven.plugins</groupId> -->
+<!--        <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--        <version>2.9.1</version>-->
+<!--        <configuration>-->
+<!--		    <additionalparam>-Xdoclint:none</additionalparam>-->
+<!--			<charset>UTF-8</charset>-->
+<!--			<docencoding>UTF-8</docencoding>-->
+<!--			<docfilessubdirs>true</docfilessubdirs>-->
+<!--			<detectJavaApiLink>true</detectJavaApiLink>-->
+<!--			<detectLinks>true</detectLinks>-->
+<!--			<source>1.8</source>-->
+<!--			<show>public</show>-->
+<!--            <excludePackageNames>-->
+<!--               org.nhindirect.common.mail.dsn.impl:org.nhindirect.common.tx.impl:org.nhindirect.common.tx.provider:org.nhindirect.common.tx.module:org.nhindirect.common.tooling:org.nhindirect.common.crypto.tools-->
+<!--            </excludePackageNames>   	                      	          -->
+<!--        </configuration>	-->
+<!--        <executions>-->
+<!--            <execution>-->
+<!--                <phase>package</phase>-->
+<!--                <id>attach-javadocs</id>-->
+<!--                <goals>-->
+<!--                  <goal>jar</goal>-->
+<!--                </goals>-->
+<!--            </execution>-->
+<!--        </executions>        	        -->
+<!--      </plugin>      -->
          <!--  for releases only	     
 	     <plugin>
              <groupId>org.apache.maven.plugins</groupId>
