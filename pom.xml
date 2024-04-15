@@ -52,7 +52,13 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-parent</artifactId>
-				 <version>Hoxton.SR12</version>
+<!--				 <version>Hoxton.SR12</version>-->
+				<version>2021.0.8</version>
+				<!--
+				2021.0.8 is the latest version I can get to compile and have tests pass.
+				2022.x.x won't compile.  Requires newer Java
+				2021.0.9 breaks org/nhindirect/common/crypto/tools/commands/PKCS11Commands.java:[645,32] error: cannot find symbol
+				-->
 				<type>pom</type>
 				<scope>import</scope>		
 			</dependency>											
